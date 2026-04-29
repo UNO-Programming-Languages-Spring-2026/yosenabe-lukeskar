@@ -25,7 +25,7 @@ path(X,Y,XX,YY,PX,Y) :- target(X,Y,XX,YY), XX <= X, cell(PX,Y), XX <= PX, PX <= 
 
 :- path(X1,Y1,XX1,YY1,PX,Py), path(X2,Y2,XX2,YY2,PX,PY), number(X1,Y1,_), number(X2,Y2,_), X1 != X2.
 
-:- path(X!,Y1,XX1,YY1,PX,PY), path(X2,Y2,XX2,YY2,PX,PY), number(X1,Y1,_), number(X2,Y2,_), Y1 != Y2.
+:- path(X1,Y1,XX1,YY1,PX,PY), path(X2,Y2,XX2,YY2,PX,PY), number(X1,Y1,_), number(X2,Y2,_), Y1 != Y2.
 
 
 #show target/4.
