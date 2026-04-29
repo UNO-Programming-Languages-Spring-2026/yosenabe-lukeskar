@@ -15,7 +15,7 @@ occupied(A) :- target(X,Y,XX,YY), area(XX,YY,A).
 
 :- area(_,_,A), not occupied(A).
 
-path(X,Y,X,PY) :- target(X,Y,XX,YY), X = XX, Y < YY, cell(X,PY), Y, PY, PY <= YY.
+path(X,Y,X,PY) :- target(X,Y,XX,YY), X = XX, Y < YY, cell(X,PY), Y < PY, PY <= YY.
 
 path(X,Y,X,PY) :- target(X,Y,XX,YY), X = XX, YY < Y, cell(X,PY), YY <= PY, PY < Y.
 
