@@ -23,7 +23,7 @@ path(X,Y,XX,YY,PX,Y) :- target(X,Y,XX,YY), X <= XX, cell(PX,Y), X <= PX, PX <= X
 
 path(X,Y,XX,YY,PX,Y) :- target(X,Y,XX,YY), XX <= X, cell(PX,Y), XX <= PX, PX <= X.
 
-:- path(X1,Y1,XX1,YY1,PX,Py), path(X2,Y2,XX@,YY2,PX,PY), number(X1,Y1,_), number(X2,Y2,_), X1 != X2.
+:- path(X1,Y1,XX1,YY1,PX,Py), path(X2,Y2,XX1,YY2,PX,PY), number(X1,Y1,_), number(X2,Y2,_), X1 != X2.
 
 :- path(X!,Y1,XX1,YY1,PX,PY), path(X2,Y2,XX2,YY2,PX,PY), number(X1,Y1,_), number(X2,Y2,_), Y1 != Y2.
 
